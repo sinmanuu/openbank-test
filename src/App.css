@@ -1,0 +1,26 @@
+.App-header-logo {
+  max-width: 80px;
+}
+
+.App-content {
+  padding: 1rem 4rem;
+}
+
+.App-content h3 {
+  color: #FF0049;
+}
+
+.App-content p {
+  color: #002B45;
+}
+
+.App-content .bye-bye {
+  margin: 4rem 0 0;
+  text-align: center;
+  background: #FFF1E5;
+  border: 1px solid #ddd;
+  color: #ababab;
+  padding: 1rem;
+  border-radius: 4px;
+}
+/*# sourceMappingURL=App.css.map */

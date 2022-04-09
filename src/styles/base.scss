@@ -4,3 +4,51 @@ $terciary-color: #FFF1E5;
 
 $white: #FFFFFF;
 $black: #000000;
+
+$general-padding: 20px 50px;
+
+*{margin: 0;padding: 0;}
+#root{
+    width: 800px; 
+    margin: 0 auto;
+    border: 1px solid #cecece;
+}
+
+button {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#menu{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #cdd4da;
+    margin: 0;
+    padding: 20px 0;
+    -webkit-box-shadow: inset 0px -10px 5px 0px rgba(206, 206, 206, 0.61);
+    -moz-box-shadow: inset 0px -10px 5px 0px rgba(206, 206, 206, 0.61);
+    box-shadow: inset 0px -10px 5px 0px rgba(206, 206, 206, 0.61);
+    
+    li{
+        border-radius: 50%;
+        padding: 5px 12px;
+        margin: 0 10px;
+        background-color: #798e9c;
+        color: $white;
+    }
+    .active{
+        background-color: $secondary-color;
+        
+    }
+}
+
+button.siguiente{
+    color: $white;
+    background-color: $secondary-color;
+}
+button.atras{
+    color: $secondary-color;
+    background-color: $white;
+}

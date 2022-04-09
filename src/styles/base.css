@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 800px;
+  margin: 0 auto;
+  border: 1px solid #cecece;
+}
+
+button {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#menu {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #cdd4da;
+  margin: 0;
+  padding: 20px 0;
+  -webkit-box-shadow: inset 0px -10px 5px 0px rgba(206, 206, 206, 0.61);
+  box-shadow: inset 0px -10px 5px 0px rgba(206, 206, 206, 0.61);
+}
+
+#menu li {
+  border-radius: 50%;
+  padding: 5px 12px;
+  margin: 0 10px;
+  background-color: #798e9c;
+  color: #FFFFFF;
+}
+
+#menu .active {
+  background-color: #002B45;
+}
+
+button.siguiente {
+  color: #FFFFFF;
+  background-color: #002B45;
+}
+
+button.atras {
+  color: #002B45;
+  background-color: #FFFFFF;
+}
+/*# sourceMappingURL=base.css.map */

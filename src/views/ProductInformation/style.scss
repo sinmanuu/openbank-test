@@ -1,0 +1,50 @@
+@import "../../styles/base";
+
+#step1{
+    
+    h1,h3{
+        color: $secondary-color;
+    }
+    h1{
+        padding: 10px 50px;
+        margin-top: 10px;
+    }
+    hr{
+        width: 40px;
+        height: 5px;
+        margin-left: 50px;
+        margin-bottom: 20px;
+        background: #40c2de;
+        border: none;
+    }
+    .images{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: $general-padding;
+        img{
+            max-height: 100px;
+            display: block;
+            margin: 10px auto;
+        }
+        p{
+            text-align: center;
+            width: 33ch;
+        }
+    }
+
+    .info{
+        padding: $general-padding;
+        h3 {
+            margin: 15px 0;
+        }
+    }
+
+    .botones{
+        padding: $general-padding;
+        margin: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid #cecece;
+    }
+}

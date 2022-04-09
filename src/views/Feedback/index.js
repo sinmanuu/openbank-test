@@ -1,11 +1,13 @@
-import React, {Component} from "react";
+import React from "react";
 
-import step from './step2.png';
+const Step3 = (props) => {
+	return (
+		<div>
+			<h1>¡Tu Password Manager ya está creado!</h1>
+			<button onClick={props.pasoAnterior}>Cancelar</button>
+			<button onClick={props.siguientePaso}>Siguiente</button>
+		</div>
+	);
+};
 
-class Step2 extends Component {
-    render() {
-        return <img src={step}/>
-    }
-}
-
-export default Step2;
+export default Step3;
