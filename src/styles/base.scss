@@ -58,6 +58,11 @@ button.atras{
     color: $secondary-color;
     background-color: $white;
 }
+button.error{
+    color: $primary-color;
+    
+    background-color: $white;
+}
 
 #step1, #step2 {
 
@@ -85,5 +90,33 @@ button.atras{
         display: flex;
         justify-content: space-between;
         border-top: 1px solid #cecece;
+    }
+}
+
+@media (max-width: 768px) {
+    #root{
+        width: auto;
+    }
+}
+
+@media (max-width: 425px) {
+    .general-padding {
+        padding: 20px;
+    }
+
+    #step1,
+    #step2 {
+        h1 {
+            padding: 20px;
+        }
+        hr {
+            margin-left: 20px;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .general-padding {
+        padding: 10px;
     }
 }

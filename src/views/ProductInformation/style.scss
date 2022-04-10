@@ -23,3 +23,14 @@
         }
     }
 }
+
+
+@media (max-width: 425px) {
+    #step1 {
+        .images {
+            p {
+                width: auto;
+            }
+        }
+    }
+}

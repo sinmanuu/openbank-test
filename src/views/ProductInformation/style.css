@@ -9,12 +9,6 @@
   border: 1px solid #cecece;
 }
 
-button {
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-}
-
 .general-padding {
   padding: 20px 50px;
 }
@@ -51,6 +45,13 @@ button {
   padding: 5px 8px;
 }
 
+button {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
 button.siguiente {
   color: #FFFFFF;
   background-color: #002B45;
@@ -58,6 +59,11 @@ button.siguiente {
 
 button.atras {
   color: #002B45;
+  background-color: #FFFFFF;
+}
+
+button.error {
+  color: #FF0049;
   background-color: #FFFFFF;
 }
 
@@ -92,6 +98,26 @@ button.atras {
   border-top: 1px solid #cecece;
 }
 
+@media (max-width: 768px) {
+  #root {
+    width: auto;
+  }
+}
+
+@media (max-width: 425px) {
+  .general-padding {
+    padding: 20px;
+  }
+  #step1 h1,
+  #step2 h1 {
+    padding: 20px;
+  }
+  #step1 hr,
+  #step2 hr {
+    margin-left: 20px;
+  }
+}
+
 #step1 .images {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -116,5 +142,11 @@ button.atras {
 
 #step1 .info h3 {
   margin: 15px 0;
+}
+
+@media (max-width: 425px) {
+  #step1 .images p {
+    width: auto;
+  }
 }
 /*# sourceMappingURL=style.css.map */

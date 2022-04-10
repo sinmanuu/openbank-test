@@ -8,7 +8,7 @@ import "./App.scss";
 
 class App extends Component {
 	state = {
-		paso: 2,
+		paso: 1,
 		pass1: "",
 		pass2: "",
 		pista: "",
@@ -34,7 +34,16 @@ class App extends Component {
 		});
 	};
 
+	pasoFinal = () => {
+		const { paso } = this.state;
+		this.setState({
+			paso: 1,
+		});
+	};
+
 	render() {
+		const valores = this.state;
+
 		switch (this.state.paso) {
 			case 1:
 				return <Step1 siguientePaso={this.siguientePaso} />;
@@ -49,8 +58,9 @@ class App extends Component {
 			case 3:
 				return (
 					<Step3
-						siguientePaso={this.siguientePaso}
+						pasoFinal={this.pasoFinal}
 						pasoAnterior={this.pasoAnterior}
+						valores={valores}
 					/>
 				);
 			default:

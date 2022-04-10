@@ -49,15 +49,21 @@ button {
   border: none;
   padding: 10px;
   border-radius: 5px;
+  font-weight: bold;
 }
 
-button button.siguiente {
+button.siguiente {
   color: #FFFFFF;
   background-color: #002B45;
 }
 
-button button.atras {
+button.atras {
   color: #002B45;
+  background-color: #FFFFFF;
+}
+
+button.error {
+  color: #FF0049;
   background-color: #FFFFFF;
 }
 
@@ -100,6 +106,9 @@ button button.atras {
 #step2 input {
   height: 30px;
   margin: 5px 0;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 #step2 .pass {

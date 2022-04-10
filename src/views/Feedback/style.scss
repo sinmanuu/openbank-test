@@ -1,0 +1,18 @@
+@import "../../styles/base";
+
+#step3 {
+    .info{
+        display: flex;
+    
+        i{
+            font-size: 50px;
+            margin-right: 20px;
+        }
+    }
+    .botones{
+        display: flex;
+        justify-content: right;
+        margin: 15px 0;
+        border-top: 1px solid #cecece;
+    }
+}

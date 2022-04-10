@@ -98,29 +98,25 @@ button.error {
   border-top: 1px solid #cecece;
 }
 
-@media (max-width: 768px) {
-  #root {
-    width: auto;
-  }
+#step3 .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-@media (max-width: 425px) {
-  .general-padding {
-    padding: 20px;
-  }
-  #step1 h1,
-  #step2 h1 {
-    padding: 20px;
-  }
-  #step1 hr,
-  #step2 hr {
-    margin-left: 20px;
-  }
+#step3 .info i {
+  font-size: 50px;
+  margin-right: 20px;
 }
 
-@media (max-width: 320px) {
-  .general-padding {
-    padding: 10px;
-  }
+#step3 .botones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  margin: 15px 0;
+  border-top: 1px solid #cecece;
 }
-/*# sourceMappingURL=base.css.map */
+/*# sourceMappingURL=style.css.map */
