@@ -19,6 +19,12 @@
             display: flex;
             flex-direction: column;
             margin-right: 30px;
+            position: relative;
+            i{
+                position: absolute;
+                bottom: 13px;
+                right: 15px;
+            }
         }
     }
     .pista{
@@ -27,6 +33,14 @@
         }
         input{
             width: 100%;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    #step2 {
+        .pass {
+            flex-direction: column;
         }
     }
 }

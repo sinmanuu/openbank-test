@@ -15,7 +15,6 @@ class App extends Component {
 	};
 
 	handleInputChange = (event) => {
-		const { paso } = this.state;
 		this.setState({
 			[event.target.name]: event.target.value,
 		});
@@ -35,7 +34,6 @@ class App extends Component {
 	};
 
 	pasoFinal = () => {
-		const { paso } = this.state;
 		this.setState({
 			paso: 1,
 		});

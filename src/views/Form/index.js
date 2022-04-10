@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./style.css";
 
 const Step2 = (props) => {
+	const [visiblePass1, setVisiblePass1] = useState(false);
+	const [visiblePass2, setVisiblePass2] = useState(false);
+	const changeVisiblePass1 = () => {
+		setVisiblePass1(!visiblePass1);
+	};
+	const changeVisiblePass2 = () => {
+		setVisiblePass2(!visiblePass2);
+	};
+
 	return (
 		<>
 			<nav>
@@ -29,20 +38,28 @@ const Step2 = (props) => {
 						<div>
 							<label htmlFor="pass1">Crea tu Contraseña Maestra</label>
 							<input
-								type="password"
+								type={visiblePass1 ? "text" : "password"}
 								name="pass1"
 								onChange={props.handleInputChange}
 								placeholder="Introduce tu contraseña"
 							/>
+							<i
+								className={visiblePass1 ? "icon-eye-open" : "icon-eye-close"}
+								onClick={changeVisiblePass1}
+							></i>
 						</div>
 						<div>
 							<label htmlFor="pass2">Repite tu Contraseña Maestra</label>
 							<input
-								type="password"
+								type={visiblePass2 ? "text" : "password"}
 								name="pass2"
 								onChange={props.handleInputChange}
 								placeholder="Repite tu constraseña"
 							/>
+							<i
+								className={visiblePass2 ? "icon-eye-open" : "icon-eye-close"}
+								onClick={changeVisiblePass2}
+							></i>
 						</div>
 					</div>
 					<div className="pista">

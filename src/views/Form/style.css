@@ -98,6 +98,32 @@ button.error {
   border-top: 1px solid #cecece;
 }
 
+@media (max-width: 768px) {
+  #root {
+    width: auto;
+  }
+}
+
+@media (max-width: 425px) {
+  .general-padding {
+    padding: 20px;
+  }
+  #step1 h1,
+  #step2 h1 {
+    padding: 20px;
+  }
+  #step1 hr,
+  #step2 hr {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .general-padding {
+    padding: 10px;
+  }
+}
+
 #step2 label {
   color: #002B45;
   font-weight: bold;
@@ -129,6 +155,13 @@ button.error {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-right: 30px;
+  position: relative;
+}
+
+#step2 .pass div i {
+  position: absolute;
+  bottom: 13px;
+  right: 15px;
 }
 
 #step2 .pista p {
@@ -137,5 +170,14 @@ button.error {
 
 #step2 .pista input {
   width: 100%;
+}
+
+@media (max-width: 600px) {
+  #step2 .pass {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=style.css.map */
