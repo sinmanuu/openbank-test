@@ -8,7 +8,7 @@ import "./App.scss";
 
 class App extends Component {
 	state = {
-		paso: 1,
+		paso: 2,
 		pass1: "",
 		pass2: "",
 		pista: "",
@@ -37,12 +37,7 @@ class App extends Component {
 	render() {
 		switch (this.state.paso) {
 			case 1:
-				return (
-					<Step1
-						siguientePaso={this.siguientePaso}
-						pasoAnterior={this.pasoAnterior}
-					/>
-				);
+				return <Step1 siguientePaso={this.siguientePaso} />;
 			case 2:
 				return (
 					<Step2

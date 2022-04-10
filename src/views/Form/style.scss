@@ -1,0 +1,30 @@
+@import "../../styles/base";
+
+#step2 {
+    label {
+        color: $secondary-color;
+        font-weight: bold;
+    }
+    input {
+        height: 30px;
+        margin: 5px 0;
+    }
+    .pass{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        div{
+            display: flex;
+            flex-direction: column;
+            margin-right: 30px;
+        }
+    }
+    .pista{
+        p{
+            margin-bottom: 20px;
+        }
+        input{
+            width: 100%;
+        }
+    }
+}

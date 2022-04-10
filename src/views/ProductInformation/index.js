@@ -17,7 +17,7 @@ const Step1 = (props) => {
 			<section id="step1">
 				<h1>Crea tu Password Manager</h1>
 				<hr />
-				<section className="images">
+				<section className="images general-padding">
 					<div>
 						<img src={img1} className="" alt={"img1"} />
 						<p>
@@ -33,7 +33,7 @@ const Step1 = (props) => {
 						</p>
 					</div>
 				</section>
-				<section className="info">
+				<section className="info general-padding">
 					<h3>Cómo funciona</h3>
 					<p>
 						En primer lugar, debes crear una contraseña diferente para sus
@@ -47,7 +47,7 @@ const Step1 = (props) => {
 						información que necesites tener en lugar seguro.
 					</p>
 				</section>
-				<section className="botones">
+				<section className="botones general-padding">
 					<button className="atras" onClick={props.pasoAnterior}>
 						Cancelar
 					</button>

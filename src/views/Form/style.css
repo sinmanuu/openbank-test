@@ -9,12 +9,6 @@
   border: 1px solid #cecece;
 }
 
-button {
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-}
-
 .general-padding {
   padding: 20px 50px;
 }
@@ -51,12 +45,18 @@ button {
   padding: 5px 8px;
 }
 
-button.siguiente {
+button {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+button button.siguiente {
   color: #FFFFFF;
   background-color: #002B45;
 }
 
-button.atras {
+button button.atras {
   color: #002B45;
   background-color: #FFFFFF;
 }
@@ -92,29 +92,41 @@ button.atras {
   border-top: 1px solid #cecece;
 }
 
-#step1 .images {
+#step2 label {
+  color: #002B45;
+  font-weight: bold;
+}
+
+#step2 input {
+  height: 30px;
+  margin: 5px 0;
+}
+
+#step2 .pass {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin-bottom: 20px;
 }
 
-#step1 .images img {
-  max-height: 100px;
-  display: block;
-  margin: 10px auto;
+#step2 .pass div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 30px;
 }
 
-#step1 .images p {
-  text-align: center;
-  width: 33ch;
+#step2 .pista p {
+  margin-bottom: 20px;
 }
 
-#step1 .info h3 {
-  margin: 15px 0;
+#step2 .pista input {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

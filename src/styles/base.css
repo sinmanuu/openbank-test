@@ -9,10 +9,8 @@
   border: 1px solid #cecece;
 }
 
-button {
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
+.general-padding {
+  padding: 20px 50px;
 }
 
 #menu {
@@ -42,6 +40,18 @@ button {
   background-color: #002B45;
 }
 
+#menu .done {
+  background-color: #FF0049;
+  padding: 5px 8px;
+}
+
+button {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
 button.siguiente {
   color: #FFFFFF;
   background-color: #002B45;
@@ -50,5 +60,36 @@ button.siguiente {
 button.atras {
   color: #002B45;
   background-color: #FFFFFF;
+}
+
+#step1 h1,
+#step1 h3, #step2 h1,
+#step2 h3 {
+  color: #002B45;
+}
+
+#step1 h1, #step2 h1 {
+  padding: 10px 50px;
+  margin-top: 10px;
+}
+
+#step1 hr, #step2 hr {
+  width: 40px;
+  height: 5px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  background: #40c2de;
+  border: none;
+}
+
+#step1 .botones, #step2 .botones {
+  margin: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid #cecece;
 }
 /*# sourceMappingURL=base.css.map */
