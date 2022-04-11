@@ -3,6 +3,7 @@ import React from "react";
 import "./style.css";
 
 const Step3 = (props) => {
+	//si las contraseñas coinciden mostramos el OK, si no el KO y podemos volver a la pantalla anterior para modificar las pass
 	if (props.valores.pass1 === props.valores.pass2) {
 		return (
 			<section id="step3">

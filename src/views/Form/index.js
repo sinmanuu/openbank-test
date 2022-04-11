@@ -15,7 +15,7 @@ const Step2 = (props) => {
 	const changeVisiblePass2 = () => {
 		setVisiblePass2(!visiblePass2);
 	};
-
+	//validamos que las contraseñas y la pista cumplan los requisitos
 	const validar = () => {
 		if (
 			validPassword.test(props.valores.pass1) &&
