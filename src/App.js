@@ -8,7 +8,7 @@ import "./App.scss";
 
 class App extends Component {
 	state = {
-		paso: 1,
+		paso: 2,
 		pass1: "",
 		pass2: "",
 		pista: "",
@@ -51,6 +51,7 @@ class App extends Component {
 						handleInputChange={this.handleInputChange}
 						siguientePaso={this.siguientePaso}
 						pasoAnterior={this.pasoAnterior}
+						valores={valores}
 					/>
 				);
 			case 3:

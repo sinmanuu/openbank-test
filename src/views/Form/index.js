@@ -5,6 +5,10 @@ import "./style.css";
 const Step2 = (props) => {
 	const [visiblePass1, setVisiblePass1] = useState(false);
 	const [visiblePass2, setVisiblePass2] = useState(false);
+	// const [validar, setValidar] = useState(false);
+
+	const validPassword = new RegExp("^(?=.*[a-z])(?=.*[A-Z])[a-zA-Zd]{8,24}$");
+
 	const changeVisiblePass1 = () => {
 		setVisiblePass1(!visiblePass1);
 	};
@@ -12,6 +16,19 @@ const Step2 = (props) => {
 		setVisiblePass2(!visiblePass2);
 	};
 
+	const validar = () => {
+		if (
+			validPassword.test(props.valores.pass1) &&
+			validPassword.test(props.valores.pass2) &&
+			props.valores.pista.length <= 255
+		) {
+			return props.siguientePaso();
+		} else {
+			alert(
+				"La contraseña tiene que contener entre 8-24 caracteres y mínimo 1 mayuscula."
+			);
+		}
+	};
 	return (
 		<>
 			<nav>
@@ -34,55 +51,58 @@ const Step2 = (props) => {
 					<p>No podrás recuperar tu contraseña, así que recuérdala bien.</p>
 				</section>
 				<section className="form general-padding">
-					<div className="pass">
-						<div>
-							<label htmlFor="pass1">Crea tu Contraseña Maestra</label>
-							<input
-								type={visiblePass1 ? "text" : "password"}
-								name="pass1"
-								onChange={props.handleInputChange}
-								placeholder="Introduce tu contraseña"
-							/>
-							<i
-								className={visiblePass1 ? "icon-eye-open" : "icon-eye-close"}
-								onClick={changeVisiblePass1}
-							></i>
+					<form>
+						<div className="pass">
+							<div>
+								<label htmlFor="pass1">Crea tu Contraseña Maestra</label>
+								<input
+									type={visiblePass1 ? "text" : "password"}
+									name="pass1"
+									onChange={props.handleInputChange}
+									placeholder="Introduce tu contraseña"
+								/>
+								<i
+									className={visiblePass1 ? "icon-eye-open" : "icon-eye-close"}
+									onClick={changeVisiblePass1}
+								></i>
+							</div>
+							<div>
+								<label htmlFor="pass2">Repite tu Contraseña Maestra</label>
+								<input
+									type={visiblePass2 ? "text" : "password"}
+									name="pass2"
+									onChange={props.handleInputChange}
+									placeholder="Repite tu constraseña"
+								/>
+								<i
+									className={visiblePass2 ? "icon-eye-open" : "icon-eye-close"}
+									onClick={changeVisiblePass2}
+								></i>
+							</div>
 						</div>
-						<div>
-							<label htmlFor="pass2">Repite tu Contraseña Maestra</label>
+						<div className="pista">
+							<p>
+								También puedes crear una pista que te ayude a recordar tu
+								contraseña maestra.
+							</p>
+							<label htmlFor="">
+								Crea tu pista para recordar tu contraseña maestra(opcional)
+							</label>
 							<input
-								type={visiblePass2 ? "text" : "password"}
-								name="pass2"
+								type="text"
+								name="pista"
 								onChange={props.handleInputChange}
-								placeholder="Repite tu constraseña"
+								placeholder="Introduce tu pista"
 							/>
-							<i
-								className={visiblePass2 ? "icon-eye-open" : "icon-eye-close"}
-								onClick={changeVisiblePass2}
-							></i>
 						</div>
-					</div>
-					<div className="pista">
-						<p>
-							También puedes crear una pista que te ayude a recordar tu
-							contraseña maestra.
-						</p>
-						<label htmlFor="">
-							Crea tu pista para recordar tu contraseña maestra(opcional)
-						</label>
-						<input
-							type="text"
-							name="pista"
-							onChange={props.handleInputChange}
-							placeholder="Introduce tu pista"
-						/>
-					</div>
+					</form>
 				</section>
 				<section className="botones general-padding">
 					<button className="atras" onClick={props.pasoAnterior}>
 						Cancelar
 					</button>
-					<button className="siguiente" onClick={props.siguientePaso}>
+					{/* <button className="siguiente" onClick={props.siguientePaso}> */}
+					<button className="siguiente" onClick={validar}>
 						Siguiente {">"}
 					</button>
 				</section>

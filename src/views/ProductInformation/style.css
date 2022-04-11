@@ -118,6 +118,12 @@ button.error {
   }
 }
 
+@media (max-width: 320px) {
+  .general-padding {
+    padding: 10px;
+  }
+}
+
 #step1 .images {
   display: -webkit-box;
   display: -ms-flexbox;
